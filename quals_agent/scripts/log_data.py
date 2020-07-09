@@ -42,7 +42,7 @@ class DataAgent(object):
         angle, throttle, _, recording = self.cont.run_threaded(img_arr=None)
         # throttle convert [-1,+1] to [-5.0,5.0]
         throttle = throttle*-5.0
-        angle *= -0.5
+        angle *= -0.75
         # print('got scan, now plan')
         drive = AckermannDriveStamped()
         drive.drive.speed = throttle
@@ -65,5 +65,5 @@ class DataAgent(object):
 
 if __name__ == '__main__':
     rospy.init_node('data_agent')
-    dummy_agent = DataAgent(override=True, mod="berlin_quals_B_1c")
+    dummy_agent = DataAgent(override=True, mod="berlin_quals_Bob8_1")
     rospy.spin()

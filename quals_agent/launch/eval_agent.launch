@@ -4,6 +4,6 @@
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find quals_agent)/launch/gym_bridge.rviz" output="screen"/>
     <!-- Launch the AI agent -->
     <node name="eval_node" pkg="quals_agent" type="eval_node.py" output="screen" 
-          args="$(find quals_agent)/model_4999.sd"/>
+          args="$(find quals_agent)/"/>
 
   </launch>
